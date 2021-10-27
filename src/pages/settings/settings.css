@@ -1,0 +1,80 @@
+.Settingtitle{
+    text-align: center;
+    font-size: 28px;
+    margin: 20px;
+    color: teal;
+}
+.Settingprofilepic{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+}
+.Settingprofilepicediticon{
+    color: #fff;
+    font-size: 16px;
+    
+}
+.editicondiv{
+    background-color: rgba(3, 3, 3, 0.808);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.updateprofilepic{
+    display: none;
+}
+.Settingsformgroup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+.settingsform{
+    width: 70%;
+    margin: auto;
+}
+.Settingprofilepic img{
+   width: 100%;
+    object-fit: cover;
+}
+
+.Settingsforminput{
+    width: 70% !important;
+    margin: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 7px;
+}
+.Settingbutton{
+    width: 70%;
+    margin: 10px;
+    border: none;
+    background-color: teal;
+    border-radius: 10px;
+    padding: 7px;
+    color: #fff;
+}
+.Formalignent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

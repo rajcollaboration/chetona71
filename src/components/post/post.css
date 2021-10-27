@@ -1,0 +1,14 @@
+.Postdescription{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+}
+.Postinfo{
+    display: flex;
+    margin: 14px;
+    justify-content: space-between;
+}

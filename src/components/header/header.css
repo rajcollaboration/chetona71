@@ -1,0 +1,38 @@
+.Headerlist{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.headerlistitem{
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.Maindiv{
+    border-top: 1px solid rgb(196, 193, 193);
+    border-bottom: 1px solid rgb(207, 206, 206);
+    padding: 10px;
+}
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Headertitle{
+    width: 60%;
+}
+.Headerimg{
+    width: 100%;
+    height: auto;
+    align-items: center;
+object-fit: cover;
+}
+@media (max-width: 1200px) {  
+    .Maindiv {
+        display: none;
+    }
+  }
