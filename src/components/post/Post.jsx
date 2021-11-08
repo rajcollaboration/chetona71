@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Post({ p }) {
    
-    const PF = "http://localhost:8000/images/"
+    const PF = "http://13.233.84.246:8000/images/"
     const classes = useStyles();
     return (
         <div>

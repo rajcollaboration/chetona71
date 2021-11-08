@@ -20,14 +20,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Singlepost() {
     const {user} = useContext(Context);
-    const PF = "http://localhost:8000/images/"
+    const PF = "http://13.233.84.246:8000/images/"
     const [singlePost,SetsinglePost] = useState({}); 
     const location = useLocation();
     const path = (location.pathname.split("/")[2]);
     console.log(path);
     useEffect(() => {
         const getPost = async ()=>{
-            const res = await axios.get('http://localhost:8000/api/post/' + path).then((e)=>{
+            const res = await axios.get('http://13.233.84.246:8000/api/post/' + path).then((e)=>{
                 
                 SetsinglePost(e.data);
             })
@@ -36,7 +36,7 @@ export default function Singlepost() {
     }, [path])
     const handleDelete=async()=>{
         try {
-            const res =await axios.delete('http://localhost:8000/api/post/' + path,{data:{username:user.username}});
+            const res =await axios.delete('http://13.233.84.246:8000/api/post/' + path,{data:{username:user.username}});
             window.location.replace('/');
         } catch (error) {
             console.log(error);

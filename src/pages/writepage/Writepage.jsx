@@ -25,7 +25,7 @@ export default function Writepage() {
     const [categorys,setCategorys] = useState([]);
     useEffect(() => {
         const category = async ()=>{
-            const res = await axios.get("http://localhost:8000/api/categories").then((e)=>{
+            const res = await axios.get("http://13.233.84.246:8000/api/categories").then((e)=>{
                 console.log(e);
                 setCategorys(e.data);
             })
@@ -70,12 +70,12 @@ export default function Writepage() {
             data.append("file", file);
             newPost.photo = filename;
             try {
-                const imres = await axios.post("http://localhost:8000/api/fileupload", data)
+                const imres = await axios.post("http://13.233.84.246:8000/api/fileupload", data)
             } catch (error) {
                 console.log(error);
             }
             try {
-                const res = await axios.post('http://localhost:8000/api/post', newPost);
+                const res = await axios.post('http://13.233.84.246:8000/api/post', newPost);
                 console.log(res);
             } catch (error) {
                 console.log(error);

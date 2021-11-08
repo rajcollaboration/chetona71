@@ -23,7 +23,7 @@ export default function Home() {
     const [posts,setposts] = useState([]);
     useEffect(() => {
         const fetchPosts = async()=>{
-           const res =await axios.get('http://localhost:8000/api/post') .then((e)=>{
+           const res =await axios.get('http://13.233.84.246:8000/api/post') .then((e)=>{
                console.log(e);
                setposts(e.data)
            })

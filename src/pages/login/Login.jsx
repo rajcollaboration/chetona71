@@ -23,7 +23,7 @@ export default function Login() {
         setError(false)
         dispatch({type:"LOGIN_START"})
         try {
-            const res = await axios.post('http://localhost:8000/api/auth/login', loginData)
+            const res = await axios.post('http://13.233.84.246:8000/api/auth/login', loginData)
             dispatch({type:"LOGIN_SUCCESS",payload:res.data})
         } catch (error) {
             dispatch({type:"LOGIN_FAILURE"})

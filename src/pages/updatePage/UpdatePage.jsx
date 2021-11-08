@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function UpdatePage() {
     
-    const PF = "http://localhost:8000/images/"
+    const PF = "http://13.233.84.246:8000/images/"
     const location = useLocation();
     const path = (location.pathname.split("/")[2]);
     console.log(path);
@@ -63,12 +63,12 @@ export default function UpdatePage() {
             data.append("file", file);
             newPost.photo = filename;
             try {
-                const imres = await axios.post("http://localhost:8000/api/fileupload", data)
+                const imres = await axios.post("http://13.233.84.246:8000/api/fileupload", data)
             } catch (error) {
                 console.log(error);
             }
             try {
-                const res = await axios.put('http://localhost:8000/api/post/' + path, newPost);
+                const res = await axios.put('http://13.233.84.246:8000/api/post/' + path, newPost);
                 console.log(res);
             } catch (error) {
                 console.log(error);
@@ -77,14 +77,14 @@ export default function UpdatePage() {
     }
     useEffect(() => {
         const category = async () => {
-            const res = await axios.get("http://localhost:8000/api/categories").then((e) => {
+            const res = await axios.get("http://13.233.84.246:8000/api/categories").then((e) => {
                 setCategorys(e.data);
             })
         }
         category();
         const getUpdatepost = async()=>{
             try {
-                const res = await axios.get('http://localhost:8000/api/post/' + path)
+                const res = await axios.get('http://13.233.84.246:8000/api/post/' + path)
                 setTitle(res.data.title)
                 setDesc(res.data.desc)
             } catch (error) {
